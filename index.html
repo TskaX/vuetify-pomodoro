@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-B8T1826YCX" async></script>
+  <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B8T1826YCX');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content="Vuetify 3 Pomodoro">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Vuetify 3</title>
+  <meta name="theme-color" content="#fff143">
+  <link rel="icon" href="./assets/favicon.0dea14b4.ico" />
+  <link rel="icon" type="image/png" href="./assets/android-chrome-192x192.27625990.png">
+  <link rel="icon" type="image/png" href="./assets/android-chrome-512x512.749a4ecf.png">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACKFBMVEUAAAAqFgwqFgwqFgwpFgwqFAoqEwkqFQspFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwqFgwpFQspFgsqFgwqFgwpFgspFgsqFgwqFQspFQooFgopFgspFQsoFQkoFQkoFgkpFgsqFQwqFgwqFQsmKCAkOTQpHhUqFgwqEwgkNjEjU1UpOjspFQoqFQooJh8mREUoPkEtO0MyN0MuISEpFQsmMi4iZGsoTVQuO0MxOEQ6PldER3A2JTEqFAomLykkQkArSlQwWm80QlU4PlVHRXJDNlhAKUQ5Hy0pHRQlQ0IqQUcsPUQuNDsuISAvISE6Kz1BK0dIKEtKI0cvFxYoLSopPD4tRE8sKCcpFAk5JTUuGxg3HSdPJ1NLHkM/Gi0oFQkpFAoqMzQtO0IyPEsuIB8xHB4/KkMqFg01GR9TH09RHEhJGDkoFQotMDQxN0I0OEgtHhwpFQk2Hyg3HyozGRxTHUtUGUhMFjkuJyk0MkA/OFU0IysrFg5AGCxiGVpWFUREFCwoFgorGRI5MUU+Lkc/KEE6Hy41GSBBGC5SF0NaFkteEUowFRQzICZBKkZGJ0hQJ1VTIE9WHVBgGVdaFkxfEUtDEyk2HSZJI0dLHkRQHEdUGUdXFUVCEykpFgstFxI8GShHGDVJFjZBFSkvFRL///83wJsXAAAANXRSTlMAAAdGpeP7++SoSQgXkO7vlBqvtAaWR+1Npa3i6Pv+4+mnSu7xUJq0uB2W8fKaren+6rBQCR0juu4AAAABYktHRLfdADtnAAAAB3RJTUUH5gwNBzkjkv+NrgAAARdJREFUGNNjYGBgZGJmYWVj5+Dk4mZkAHIZeXj5TM3MLUwt+QUEGRkZGHmELC2trG1sTe0sLYUFGRlEeC1N7R0cnZxdXO3cLEWZGMTETU3dPTy9vH18/dzc+CUYJC39AwKDgkNCw8IjIu0spRikTaOiY2Lj4hMSk5JTUt1kGGT909IzMrPcsnNy8/ILCuUYZIuKS0rL7MorKquqa2rr5Bjki+obGpuaW1oL29o7OgsVGBSLurp7eu36+ur6J0ycNFmIQUl5ytRp02dUzZw1e87ceSqqDEwCdvMXLFy0eMnSZctXTFbjZmAUVHdbuWr1mrXr5q7foKEJ9AujoJb2xk2bt2zdpqOryQj2L7eEnr6BgaGRsQmQDwAHlEzGDAHIZwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0xM1QwNzo1NzozNSswMDowMK8+dFMAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMTNUMDc6NTc6MzUrMDA6MDDeY8zvAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH5gwNBzkkDJsYDQAAB+lJREFUWMONl0tsXOUVx3/fd+/cmfGMx4/J+BW/ajsJCYTSBPEISkSAEAKqgBIKLSqK1K6qdlEVtarURdd9b1p1RYFWbVm0sIBQSiAuQYlIE4XS4LzIy45jx3b8mhnPzJ37faeLO+OMjR04Gy985/z/5/+dp+JzbFNLEsAB+oEHgJ3A7UA7kAQUkAfGgP8Bg8B7wFkgGJrI3dS/+gLAdwD7gEeBbsD9HM4GuAL8E3gJOHYzIp8hUAEGaAO+B3wHaF38QATE1njQiFKrRTIFvAz8tkKK5USW/K4GfAvwS+D+Jd+IIK5L7v6HkWQjrm+JHR1ET46B1jdT5Qjww8rfJST0CuA7gD8TvvVnAzMG096DMz+HOzeD2bITlAqVWd3urfjcvQwLZ4XIXwQ2ruRFlEIZg5PPQ2sv3qG30Ju2oaauIPk5UAqlVk2rJmAbcBwYySQ8JvM+tbq1VWRfERwRlDGIF0U7HrprI9Qlcc6eIHr3U0Q6N6NcD7EGWV2NvgpG96ICleg18GPg+c/gAkoEUYpg/e2UdzwGTS24xwbR18eR6TFUsUCs506SXXehjSXIXUNEVlOjs6L8gUzCs04m4QFsBX5BWNdLwa1F4nUUntxHsO0RvJFLRD54Ezfdi7f5IaJdd6CLBUqnDxJPddOy4UmS9X3kJ09iTWk1EuuAw8BlJ5PwqtE/uBK4rW+g8Ogz0JAmOvRfnM5NqJGzKKUxn/4HM3oa7UTRomju301++EMSdR00pm4hP3eOICisRCJOmOD7nUzCWw/8DGiu/UJJCL7w2LNELpwm/sZfcK2Dm+5CXT6F1/wlEv3bSbTehuOXMbkpUql+cleOMnrmVSI6TnfbI8xlzxCYFUlkgHedTMJ7GvgGNSWJCOK4FHfvxR05T/TYIdi6C/feJ4i2bsR1E5jJi0SsBr+AmR0j3bWTlsw9pJJ9uOIydvUAno7T07SdifmPEbHLSSSBS04m4b1A2NtvmLUEm+9CGpqIDr6B+soDqOY21ImDRBu78T/aT+n0v/FizUgxy+z5d9HGkEz2MnLmrzTEuknF1jI88Q7tdZuJ6XpmShdRakmzUoBRm1qSQ0tKTwTxYpQe34d38HV0JIHz4POY136D5GbQXhyUwvoFnEj4lKacx3HrADDBAtFIA9v6fsLJ0T9RLF1na/NzHJ78A75dWK7CFQ10LK07i13bh5PNoqfGcW7djpOdI771cXRdI7ZcwPrhm5pyAVPO09K2g1gsQ1DOEXUbuKV1L+XSHAP195MLJvBLM7R56xEsy6xVLy89BOjowxk+h0qtwXGi+Pt/h//JINgAqO12QiLRxZo1d+L7syilsWK4PH2QI8O/JmIcUm4bE4VTdDjrK86XWGTpBBFBtMZJNKOmxnCaO2F6AilmCSbPY0u5RfCw0WjWduxi6tph/FJIoGxyTOfPUjJZcsVR1rg9zAajNNo0GhdZRsIlXCZSi5mhHRzlYYoLOOl+4i0biX35KXRgyF4+QlCYqZCwNKZuxVUxpq4fRymNiBB3mxhIbCdiI/Q6t3OhXGTCniVqPLRyMBLUjrjAJdxkUovNB3AMWBQ6sJCfozx3FW1BjF8jlpCMrWUhewljSmjtIiIYKTNfHkeLpk26Udai0biGlWzCBU4CG6p1ITbALZYw0XokN42anSR/6Ug46bR7o5SUouzPYZQTjmNAKYVvclxYOIwgdHl9ZO0UCanHmhKGYPmAH9KEO5ypOkUszE7iNXZTnhkhFmslmmwn3X4fXrRpcdIpNBNzJxifPY6q9DARoU43sdHbQZNuJ0MHE/YiHdLLrExglaFmdxJgUBMukCM3SGmC8XMkmtcRlOYhN83AnT8inuzEGh+Qxa5mbRlrfZRSiAiCEEiJtF7Lc5GfUrRZsvY6A+ZWLnGKZYvbOPAvDZwB3r7RnxT+9GVc61DXNMD0hQOoYp7pqx9QLs8TizQT99JYsSTcNAk3gxVLUjdTr9MUJMtQaZBysMBRs59uu46o9RhRny4qVbGDwMe6Iv/LwGT1HcX4ZC8eorX7YfziNNcu7mddzzdJ1fWwofUJEl4bVgI643fQHd+CJaBBt7AtupdW1cMetY8P7ZvMyDg7y1/lqHMQX5VqFZgD/giUqpSOAq/cUEGTmxqiPH+Vnt6vMTV1jPFr77Ol+7tkYuvJF8dAgbbg2NDprBmjy/az1/kBH8sHnJTD7PGf4boa55RzAr00+leB96uJX90JOyv/2FZNKK0jDPQ8iwoCPh39O1E3xbqGh2jWHfilWVpUFxHrMFO8RIOkmbVjHDfvkJMZ9vhfp84m+EfspeXRnwCeBs4vJ0AF/BXCKwgRwdER+lseIx3p5eL1A0wUhnB1nCZnLfWqCS2KvJlh2o5SkgX67CZ2lPcwroY54L0Wgouult8VwiPnXQjX80VaNSR2A78nXCArZSdk6m5hfWInUesxU7jAdHmYoplHCSRJ0W576DEDiDUcdd/jnHMyfE1RteDfB16vgi8qsAKJ+4BfAXdXSQgWrVya3U463A2kaafO1OEaRWALzNhxhjnDmBomUGU0ulb2j4AXKiUvtYfJzU6zbsJr5luEO/1irQsWhbrRgLCIElQFtAZ4Hvgb8PPqm9/0NFuBSAS4B/g2sIvwdlhM5+pkW9ZgBLhWifZF4BDgf+HjdBU1PGBTJT92ArcRHqzVSzkg7COfELb2twlP9dJKUdfa/wGUQV9DzgzlHAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0xM1QwNzo1NzozNiswMDowMJ7Wbs4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMTNUMDc6NTc6MzYrMDA6MDDvi9ZyAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC">
+
+  <!-- applew PWA -->
+  <!-- 
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1867C0">
+  <meta name="apple-mobile-web-app-title" content="Pomodoro">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon-180x180.png"> 
+  <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#1867C0">
+
+  ---------- appsco.pe--------------------
+  <link href="/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/img/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/img/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/img/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/img/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+  --------------MS PWA----------------
+  <meta name="msapplication-TileColor" content="#1867C0">
+  <meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-square150x150logo" content="/img/icons/mstile-150x150.png" >
+-->
+  <!-- https://metatags.io/ -->
+  <!-- Open Graph / Facebook  -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://TskaX.github.io/vuetify-pomodoro">
+<meta property="og:title" content="Pomodoro">
+<meta property="og:description" content="Vuetify 3 Pomodoro">
+<meta property="og:image" content="https://raw.githubusercontent.com/TskaX/vuetify-pomodoro/master/public/img/iphone6_splash.png">
+
+  <!-- Twitter  -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://TskaX.github.io/vuetify-pomodoro">
+<meta property="twitter:title" content="Pomodoro">
+<meta property="twitter:description" content="Vuetify 3 Pomodoro">
+<meta property="twitter:image" content="https://raw.githubusercontent.com/TskaX/vuetify-pomodoro/master/public/img/iphone6_splash.png">
+  <script type="module" crossorigin src="./assets/index.1d9828bc.js"></script>
+  <link rel="stylesheet" href="./assets/index.9b7cd237.css">
+<link rel="manifest" href="./manifest.webmanifest"></head>
+
+<body>
+  <div id="app"></div>
+  
+</body>
+
+</html>
