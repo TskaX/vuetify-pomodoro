@@ -7,6 +7,7 @@ v-row#home
     v-btn(v-if="status !== 1" icon="mdi-play" variant="text" @click="startTimer")
     v-btn(v-if="status === 1" icon="mdi-pause" variant="text" @click="pauseTimer")
     v-btn(v-if="currentItem.length > 0" icon="mdi-skip-next" variant="text" @click="finishTimer")
+    test
 </template>
 
 <script setup>
