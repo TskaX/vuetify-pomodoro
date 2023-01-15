@@ -1,7 +1,7 @@
 <template lang="pug">
 v-row#settings
   v-col(cols="12")
-    h1.text-center 設定
+    h1.text-center(style="color:white") 音樂設定
   v-col(cols="12")
     v-table
       thead

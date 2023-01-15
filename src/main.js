@@ -12,20 +12,21 @@ import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import Particles from 'particles.vue3'
 
 // PWA
 import { registerSW } from 'virtual:pwa-register'
 
 import router from '@/plugins/router'
+import '@/scss/main.scss'
 
 registerSW({
-  onNeedRefresh () {},
-  onOfflineReady () {}
+  onNeedRefresh () { },
+  onOfflineReady () { }
 })
 
 const app = createApp(App)
 
 registerPlugins(app)
-
-app.use(router)
+app.use(router).use(Particles)
 app.mount('#app')

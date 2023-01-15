@@ -1,0 +1,53 @@
+.v-application__wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.v-layout {
+  height: 100vh;
+  width: 55px;
+  position: fixed;
+}
+.v-layout .list-title {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: purple;
+  font-family: "Rubik", sans-serif;
+}
+.v-layout .list-title .v-list-item__prepend {
+  position: relative;
+  left: -8px;
+}
+.v-layout .full-list .v-btn {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.v-layout .full-list .v-col {
+  padding: 0;
+  border-top: 1px solid rgb(78, 223, 83);
+}
+.v-layout .full-list .v-col:last-child {
+  border-bottom: 1px solid rgb(78, 223, 83);
+}
+.v-layout .full-list .v-col .v-list-item__content {
+  font-family: "Rubik", sans-serif;
+  color: purple;
+}
+.v-layout .full-list .v-btn__prepend {
+  font-size: 1rem;
+}
+
+.v-main {
+  width: 100vw;
+  position: relative;
+}
+
+#home .v-row .v-col h1 {
+  text-align: center;
+}
+
+@media (min-width: 1050px) {
+  .v-layout {
+    width: 20vw;
+  }
+}

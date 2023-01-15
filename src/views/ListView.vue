@@ -1,11 +1,8 @@
 <template lang="pug">
 v-row#list
   v-col(cols="12")
-    h1.text-center 待辦事項
+    h1.text-center(style="color:white") 待辦事項
   v-col(cols="12")
-    v-text-field(ref="input" v-model="newItem" label="新增事項" style="width:500px;" :rules="[rules.required, rules.length]" @keydown.enter="onInputSubmit")
-      template(#append)
-        v-btn(icon="mdi-plus" variant="text" @click="onInputSubmit")
     v-table
       thead
         tr
@@ -14,7 +11,7 @@ v-row#list
       tbody
         tr(v-if="items.length === 0")
           td.text-center(colspan="2") 沒有事項
-        tr(v-for="item in items" :key="item.id" ref="editInputs")
+        tr(v-for="item in items" :key="item.id")
           td
             v-text-field(v-if="item.edit" v-model="item.model" autofocus :rules="[rules.required, rules.length]" @keydown.enter="confirmEditItem(item.id) ")
             span(v-else) {{ item.name }}
@@ -27,7 +24,7 @@ v-row#list
               v-btn(icon="mdi-delete" variant="text" color="red" @click="delItem(item.id)")
   v-divider
   v-col(cols="12")
-    h1.text-center 已完成事項
+    h1.text-center(style="color:white") 已完成事項
   v-col(cols="12")
     v-table
       thead
@@ -49,28 +46,18 @@ import { storeToRefs } from 'pinia'
 import { useListStore } from '@/stores/list'
 
 const list = useListStore()
-const { addItem, editItem, delItem, confirmEditItem, undoEditItem, delFinishedItem } = list
+const { editItem, delItem, confirmEditItem, undoEditItem, delFinishedItem } = list
 const { items, finishedItems } = storeToRefs(list)
 
-const newItem = ref('')
-const input = ref(null)
 const editInputs = ref([])
 
 const rules = {
-  required (v) {
+  required(v) {
     return !!v || '欄位必填'
   },
-  length (v) {
+  length(v) {
     return v.length > 3 || '必須超過三個字元'
   }
 }
 
-const onInputSubmit = async () => {
-  const valid = await input.value.validate()
-  if (valid.length > 0) return
-  addItem(newItem.value)
-  // 取消新增完的 focus
-  input.value.$el.querySelector('input').blur()
-  input.value.reset()
-}
 </script>
